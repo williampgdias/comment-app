@@ -1,4 +1,4 @@
-import "./Comment.style.css";
+import './Comment.style.css';
 
 const Comment = (props) => {
   const { name, email, message, date } = props;
@@ -9,7 +9,6 @@ const Comment = (props) => {
       <p>{email}</p>
       <p>{message}</p>
       <p>{date.toString()}</p>
-      <p>This is the Comment Component.</p>
     </div>
   );
 };
