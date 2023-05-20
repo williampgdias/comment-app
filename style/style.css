@@ -18,6 +18,11 @@
   gap: 10px;
 }
 
+.container-default {
+  max-width: 1000px;
+  margin-left: 300px;
+}
+
 .nav-bar-div {
   position: fixed;
   border-right: 1px solid black;
@@ -47,10 +52,11 @@
   color: black;
   padding: 5px 20px;
   display: block;
+  cursor: pointer;
 }
 
 #photo-container {
-  margin-left: 360px;
+  padding-bottom: 100px;
 }
 
 #photo-container img {
@@ -60,10 +66,41 @@
 
 .page-link {
   color: black;
+  cursor: pointer;
+}
+
+.page-item .page-pagination {
+  cursor: default;
+}
+
+.page-item .page-pagination:hover {
+  color: inherit;
 }
 
 .page {
   grid-column: 1 / 4;
   margin-top: 50px;
   margin-right: 100px;
+}
+
+.pagination-orientation {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 920px;
+}
+
+.btn-orientation {
+  border: 1px solid #dee2e6;
+  color: black;
+}
+
+.btn-orientation:first-child {
+  margin-right: 10px;
+}
+
+.btn-orientation:hover {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  color: #aaa7e4;
 }

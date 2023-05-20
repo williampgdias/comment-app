@@ -1,5 +1,7 @@
-// PEXELS API
+// PEXELS API KEY
 // ir6gQLxYcguDwucjHLgJAzJBg0SlFdkQOYOkam1CmRLJKhuDfJwYY2Xn
+
+const apiKey = 'ir6gQLxYcguDwucjHLgJAzJBg0SlFdkQOYOkam1CmRLJKhuDfJwYY2Xn';
 
 // APITOJSON FUNCTION
 function APIToJson(response) {
@@ -23,13 +25,19 @@ function showOnScreen(data) {
   });
 }
 
+function createApiUrl(route, link) {
+  const baseUrl = 'https://api.pexels.com';
+  return `${baseUrl}${route}?${link}`;
+}
+
+// HOME PAGE WITH RANDOM PHOTOS
 let page = 1;
-let apiUrl = `https://api.pexels.com/v1/curated?page=${page}&per_page=12`;
+let apiUrl = createApiUrl('/v1/curated', `page=${page}&per_page=12`);
 
 function callAPIFunction(url) {
   return fetch(url, {
     headers: {
-      Authorization: 'ir6gQLxYcguDwucjHLgJAzJBg0SlFdkQOYOkam1CmRLJKhuDfJwYY2Xn',
+      Authorization: apiKey,
     },
   })
     .then(APIToJson)
